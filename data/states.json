@@ -1,0 +1,62 @@
+[
+    {
+        "name": "State: Scorching Heat",
+        "category": "State Card",
+        "condition": "High Temperature",
+        "energy_cost": 0,
+        "stability": 3,
+        "effect": "During this turn, all combustion or oxidation reactions gain +20% damage, but the stability of your compounds decreases by 1 point.",
+        "bonus": "Boosts fire-based reactions",
+        "flavor": "Extreme heat accelerates reactions but also destabilizes molecular structures."
+    },
+    {
+        "name": "State: Glacial Cold",
+        "category": "State Card",
+        "condition": "Low Temperature",
+        "energy_cost": 0,
+        "stability": 7,
+        "effect": "Reduce the energy cost of Elemental cards by 1 during this turn and freeze an opponent's Reaction card, preventing it from activating on their next turn.",
+        "bonus": "Reduces energy cost of elemental reactions",
+        "flavor": "Frost not only preserves but also freezes the opponent's opportunities."
+    },
+    {
+        "name": "State: Extreme Pressure",
+        "category": "State Card",
+        "condition": "High Pressure",
+        "energy_cost": 0,
+        "stability": 8,
+        "effect": "Increase the stability of all your compounds by 1 point, but raise the energy cost of activating reactions by 1 during this turn.",
+        "bonus": "Enhances structural integrity of compounds",
+        "flavor": "Under overwhelming pressure, solidity strengthens, but energy becomes scarcer."
+    },
+    {
+        "name": "State: Space Vacuum",
+        "category": "State Card",
+        "condition": "Low Pressure (or absence of pressure)",
+        "energy_cost": 0,
+        "stability": 4,
+        "effect": "Nullify the effect of an opponent's Catalyst or Scientist card during this turn, simulating an environment devoid of physical support.",
+        "bonus": "Cancels Catalyst and Scientist effects",
+        "flavor": "In the vacuum, the rules of reaction are redefined, rendering enemy strategies ineffective."
+    },
+    {
+        "name": "State: Liquid Flow",
+        "category": "State Card",
+        "condition": "Phase change to liquid",
+        "energy_cost": 0,
+        "stability": 6,
+        "effect": "Allows you to swap two Elemental cards in your hand at no cost, representing the fluidity and adaptability of the liquid state.",
+        "bonus": "Increases card flexibility and strategic swaps",
+        "flavor": "Like water, your strategies adapt and flow, always finding the path to victory."
+    },
+    {
+        "name": "State: Plasma Ionization",
+        "category": "State Card",
+        "condition": "Phase change to plasma",
+        "energy_cost": 0,
+        "stability": 2,
+        "effect": "Activates a chain reaction that triggers random effects on the battlefield, potentially increasing or reducing damage by 50% during this turn.",
+        "bonus": "Triggers unpredictable chain reactions",
+        "flavor": "The energy of plasma is as unpredictable as it is electrifying, altering the rules of the game with every spark."
+    }
+]

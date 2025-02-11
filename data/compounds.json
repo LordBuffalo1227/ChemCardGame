@@ -1,0 +1,218 @@
+[
+    {
+        "name": "Sodium Chloride",
+        "category": "Ionic Compound",
+        "energy_cost": 2,
+        "stability": 7,
+        "effect": "Ionic Shield - +1 stability for each ionic compound on your field",
+        "bonus": "When dissolved in water, becomes 'Electrolyte Solution' (+1 energy generation)"
+    },
+    {
+        "name": "Sulfuric Acid",
+        "category": "Strong Acid",
+        "energy_cost": 5,
+        "stability": 6,
+        "effect": "Dehydration Master - Can remove water from other compounds",
+        "bonus": "Double damage against metal compounds"
+    },
+    {
+        "name": "Methane",
+        "category": "Organic Compound",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Greenhouse Gas - Reduces opponent's energy generation by 1",
+        "bonus": "Combusts with oxygen for massive damage"
+    },
+    {
+        "name": "Calcium Carbonate",
+        "category": "Mineral Compound",
+        "energy_cost": 4,
+        "stability": 8,
+        "effect": "Mineral Shield - Blocks one acid attack per turn",
+        "bonus": "Can decompose to release CO₂"
+    },
+    {
+        "name": "Glucose",
+        "category": "Organic Compound",
+        "energy_cost": 6,
+        "stability": 5,
+        "effect": "Energy Storage - Can be sacrificed for +3 energy",
+        "bonus": "Forms longer chains with other glucose molecules"
+    },
+    {
+        "name": "Ammonia",
+        "category": "Basic Compound",
+        "energy_cost": 3,
+        "stability": 4,
+        "effect": "Basic Assault - Can neutralize one acid compound",
+        "bonus": "Forms ammonium compounds with acids"
+    },
+    {
+        "name": "Iron(III) Oxide",
+        "category": "Metal Oxide",
+        "energy_cost": 4,
+        "stability": 9,
+        "effect": "Rust Formation - Increases stability by 1 each turn",
+        "bonus": "Can be reduced to pure iron"
+    },
+    {
+        "name": "Ethanol",
+        "category": "Organic Compound",
+        "energy_cost": 4,
+        "stability": 4,
+        "effect": "Solvent Power - Can dissolve organic compounds",
+        "bonus": "Burns with high energy release"
+    },
+    {
+        "name": "Hydrochloric Acid",
+        "category": "Strong Acid",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Corrosive Strike - Deals double damage to metal compounds",
+        "bonus": "Forms salts with bases"
+    },
+    {
+        "name": "Potassium Hydroxide",
+        "category": "Strong Base",
+        "energy_cost": 4,
+        "stability": 6,
+        "effect": "Base Burst - Neutralizes all adjacent acid compounds",
+        "bonus": "Forms soaps with fats"
+    },
+    {
+        "name": "Diamond",
+        "category": "Elemental Crystal",
+        "energy_cost": 7,
+        "stability": 10,
+        "effect": "Unbreakable - Cannot be destroyed by normal attacks",
+        "bonus": "Conducts heat damage to adjacent cards"
+    },
+    {
+        "name": "Copper Sulfate",
+        "category": "Metal Salt",
+        "energy_cost": 5,
+        "stability": 7,
+        "effect": "Blue Vitriol - Dehydrates adjacent compounds",
+        "bonus": "Forms bright blue crystals with water"
+    },
+    {
+        "name": "Hydrogen Peroxide",
+        "category": "Peroxide",
+        "energy_cost": 3,
+        "stability": 3,
+        "effect": "Oxidizing Power - Deals damage to all adjacent cards",
+        "bonus": "Decomposes to water and oxygen"
+    },
+    {
+        "name": "Sodium Bicarbonate",
+        "category": "Salt",
+        "energy_cost": 4,
+        "stability": 6,
+        "effect": "Buffer Solution - Prevents pH changes in adjacent cards",
+        "bonus": "Releases CO₂ when heated"
+    },
+    {
+        "name": "Silver Nitrate",
+        "category": "Metal Salt",
+        "energy_cost": 5,
+        "stability": 7,
+        "effect": "Light Sensitivity - Can trap light energy for later use",
+        "bonus": "Forms silver mirror when reduced"
+    },
+    {
+        "name": "Acetylene",
+        "category": "Organic Compound",
+        "energy_cost": 4,
+        "stability": 2,
+        "effect": "Triple Bond Power - High damage to single target",
+        "bonus": "Burns extremely hot"
+    },
+    {
+        "name": "Zinc Oxide",
+        "category": "Metal Oxide",
+        "energy_cost": 3,
+        "stability": 8,
+        "effect": "UV Shield - Protects adjacent cards from light-based attacks",
+        "bonus": "Semiconductor properties"
+    },
+    {
+        "name": "Nitric Acid",
+        "category": "Strong Acid",
+        "energy_cost": 4,
+        "stability": 5,
+        "effect": "Oxidizing Acid - Can dissolve noble metals",
+        "bonus": "Forms nitrate salts"
+    },
+    {
+        "name": "Silicon Dioxide",
+        "category": "Network Solid",
+        "energy_cost": 4,
+        "stability": 9,
+        "effect": "Crystal Network - Boosts stability of adjacent cards",
+        "bonus": "Forms complex silicate structures"
+    },
+    {
+        "name": "Phosphoric Acid",
+        "category": "Acid",
+        "energy_cost": 5,
+        "stability": 7,
+        "effect": "Triple Proton Attack - Can attack three times per turn",
+        "bonus": "Forms phosphate buffers"
+    },
+    {
+        "name": "Hemoglobin",
+        "category": "Biological Complex",
+        "energy_cost": 6,
+        "stability": 7,
+        "effect": "Oxygen Transport - Can store oxygen cards for later use",
+        "bonus": "Combines with O₂ to form oxyhemoglobin (+2 energy per turn)"
+    },
+    {
+        "name": "Chlorophyll",
+        "category": "Biological Complex",
+        "energy_cost": 5,
+        "stability": 6,
+        "effect": "Photosynthesis - Generates 1 energy per turn when exposed to light",
+        "bonus": "Creates glucose from CO₂ and H₂O"
+    },
+    {
+        "name": "Polyethylene",
+        "category": "Synthetic Polymer",
+        "energy_cost": 6,
+        "stability": 8,
+        "effect": "Chain Growth - Can add more monomers to increase strength",
+        "bonus": "Increases stability with each monomer added"
+    },
+    {
+        "name": "Nylon-6,6",
+        "category": "Synthetic Polymer",
+        "energy_cost": 6,
+        "stability": 7,
+        "effect": "Fiber Formation - Creates protective barrier against physical attacks",
+        "bonus": "Gains strength when stretched"
+    },
+    {
+        "name": "Buckminsterfullerene",
+        "category": "Carbon Allotrope",
+        "energy_cost": 8,
+        "stability": 9,
+        "effect": "Molecular Cage - Can trap and neutralize opponent's cards",
+        "bonus": "Can form superconductor compounds"
+    },
+    {
+        "name": "Prussian Blue",
+        "category": "Coordination Complex",
+        "energy_cost": 8,
+        "stability": 8,
+        "effect": "Artist's Power - Can copy the effect of any compound card once per game",
+        "bonus": "Becomes stronger in acidic conditions"
+    },
+    {
+        "name": "Carborundum",
+        "category": "Ceramic Compound",
+        "energy_cost": 5,
+        "stability": 10,
+        "effect": "Diamond Rival - Immune to acid attacks and thermal damage",
+        "bonus": "Reflects damage back to attacker"
+    }
+]

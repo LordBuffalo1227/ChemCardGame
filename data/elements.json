@@ -1,0 +1,322 @@
+[
+    {
+        "name": "Lithium",
+        "category": "Alkali Metals",
+        "energy_cost": 1,
+        "stability": 3,
+        "effect": "Light Metal Master - Can be played for free if you have no elements on the field",
+        "bonus": "When combined with Water, generates 2 bonus energy"
+    },
+    {
+        "name": "Sodium",
+        "category": "Alkali Metals",
+        "energy_cost": 1,
+        "stability": 2,
+        "effect": "Alkali Burst - Deals 3 damage to adjacent compounds when destroyed",
+        "bonus": "+2 damage when reacting with Halogens"
+    },
+    {
+        "name": "Potassium",
+        "category": "Alkali Metals",
+        "energy_cost": 2,
+        "stability": 2,
+        "effect": "Violet Flame - Can ignite without a catalyst",
+        "bonus": "Generates extra energy when used in biological compounds"
+    },
+    {
+        "name": "Rubidium",
+        "category": "Alkali Metals",
+        "energy_cost": 2,
+        "stability": 1,
+        "effect": "Spontaneous Ignition - Auto-reacts with any water compound",
+        "bonus": "Double damage in explosive reactions"
+    },
+    {
+        "name": "Cesium",
+        "category": "Alkali Metals",
+        "energy_cost": 3,
+        "stability": 1,
+        "effect": "Atomic Clock - Allows an extra element play this turn",
+        "bonus": "Triples reaction speed with Halogens"
+    },
+    {
+        "name": "Beryllium",
+        "category": "Alkaline Earth Metals",
+        "energy_cost": 1,
+        "stability": 6,
+        "effect": "Toxic Shield - Prevents 1 damage to adjacent elements",
+        "bonus": "+2 stability to all compounds it forms"
+    },
+    {
+        "name": "Magnesium",
+        "category": "Alkaline Earth Metals",
+        "energy_cost": 2,
+        "stability": 5,
+        "effect": "Bright Burn - Can initiate a reaction without energy cost once per game",
+        "bonus": "Enhances photochemical reactions"
+    },
+    {
+        "name": "Calcium",
+        "category": "Alkaline Earth Metals",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Bone Builder - Strengthens biological compounds",
+        "bonus": "Double effectiveness in ionic compounds"
+    },
+    {
+        "name": "Strontium",
+        "category": "Alkaline Earth Metals",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Crimson Flame - Can color any reaction red",
+        "bonus": "+3 attack when used in firework reactions"
+    },
+    {
+        "name": "Barium",
+        "category": "Alkaline Earth Metals",
+        "energy_cost": 3,
+        "stability": 3,
+        "effect": "Heavy Shield - Provides protection from acid attacks",
+        "bonus": "+2 stability to all compounds in your control"
+    },
+    {
+        "name": "Iron",
+        "category": "Transition Metals",
+        "energy_cost": 2,
+        "stability": 7,
+        "effect": "Magnetic Pull - Can attract one metal card from your deck",
+        "bonus": "+3 stability in oxide forms"
+    },
+    {
+        "name": "Copper",
+        "category": "Transition Metals",
+        "energy_cost": 2,
+        "stability": 8,
+        "effect": "Conductor - Transfers energy between compounds",
+        "bonus": "+2 attack in electrical reactions"
+    },
+    {
+        "name": "Silver",
+        "category": "Transition Metals",
+        "energy_cost": 3,
+        "stability": 8,
+        "effect": "Noble Defense - Immune to corrosion",
+        "bonus": "Doubles effectiveness of catalyst cards"
+    },
+    {
+        "name": "Gold",
+        "category": "Transition Metals",
+        "energy_cost": 4,
+        "stability": 9,
+        "effect": "Noble Resistance - Cannot be destroyed by acid attacks",
+        "bonus": "Immune to single-element attacks"
+    },
+    {
+        "name": "Zinc",
+        "category": "Transition Metals",
+        "energy_cost": 2,
+        "stability": 6,
+        "effect": "Galvanizer - Protects adjacent metal cards from corrosion",
+        "bonus": "+2 energy when used in battery reactions"
+    },
+    {
+        "name": "Aluminum",
+        "category": "Post-Transition Metals",
+        "energy_cost": 2,
+        "stability": 8,
+        "effect": "Oxide Shield - Forms protective layer against attacks",
+        "bonus": "+3 stability when forming oxides"
+    },
+    {
+        "name": "Tin",
+        "category": "Post-Transition Metals",
+        "energy_cost": 2,
+        "stability": 7,
+        "effect": "Alloy Master - Can combine with any metal",
+        "bonus": "+2 stability to alloy compounds"
+    },
+    {
+        "name": "Lead",
+        "category": "Post-Transition Metals",
+        "energy_cost": 3,
+        "stability": 8,
+        "effect": "Heavy Metal - Cannot be moved by opponent's effects",
+        "bonus": "Double defense against acid attacks"
+    },
+    {
+        "name": "Bismuth",
+        "category": "Post-Transition Metals",
+        "energy_cost": 3,
+        "stability": 8,
+        "effect": "Crystal Formation - Creates defensive structures",
+        "bonus": "+1 stability to all your compounds"
+    },
+    {
+        "name": "Gallium",
+        "category": "Post-Transition Metals",
+        "energy_cost": 2,
+        "stability": 6,
+        "effect": "Liquid Metal - Can change state at will",
+        "bonus": "Can substitute for any other post-transition metal"
+    },
+    {
+        "name": "Silicon",
+        "category": "Metalloids",
+        "energy_cost": 2,
+        "stability": 6,
+        "effect": "Semiconductor - Can transfer energy between cards",
+        "bonus": "+2 stability in oxide forms"
+    },
+    {
+        "name": "Boron",
+        "category": "Metalloids",
+        "energy_cost": 2,
+        "stability": 7,
+        "effect": "Electron Deficient - Can form unique bonds",
+        "bonus": "+3 attack in covalent compounds"
+    },
+    {
+        "name": "Germanium",
+        "category": "Metalloids",
+        "energy_cost": 3,
+        "stability": 7,
+        "effect": "Crystal Network - Links adjacent elements",
+        "bonus": "+2 energy when used in electronic compounds"
+    },
+    {
+        "name": "Arsenic",
+        "category": "Metalloids",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Toxic Touch - Poisons opposing compounds",
+        "bonus": "Double damage to biological compounds"
+    },
+    {
+        "name": "Antimony",
+        "category": "Metalloids",
+        "energy_cost": 3,
+        "stability": 6,
+        "effect": "Flame Retardant - Prevents fire damage",
+        "bonus": "+2 stability to all compounds"
+    },
+    {
+        "name": "Carbon",
+        "category": "Nonmetals",
+        "energy_cost": 1,
+        "stability": 7,
+        "effect": "Chain Former - Can form multiple bonds",
+        "bonus": "+1 energy for each organic compound you control"
+    },
+    {
+        "name": "Nitrogen",
+        "category": "Nonmetals",
+        "energy_cost": 2,
+        "stability": 7,
+        "effect": "Triple Bond - Can form extremely strong bonds",
+        "bonus": "+3 stability in biological compounds"
+    },
+    {
+        "name": "Oxygen",
+        "category": "Nonmetals",
+        "energy_cost": 2,
+        "stability": 6,
+        "effect": "Life Giver - Powers up biological compounds",
+        "bonus": "Double effectiveness in combustion reactions"
+    },
+    {
+        "name": "Phosphorus",
+        "category": "Nonmetals",
+        "energy_cost": 2,
+        "stability": 5,
+        "effect": "Energy Storage - Can store energy for later use",
+        "bonus": "+2 attack in energy transfer reactions"
+    },
+    {
+        "name": "Sulfur",
+        "category": "Nonmetals",
+        "energy_cost": 2,
+        "stability": 6,
+        "effect": "Bridge Builder - Can link different compounds",
+        "bonus": "+3 damage when forming acid compounds"
+    },
+    {
+        "name": "Fluorine",
+        "category": "Halogens",
+        "energy_cost": 2,
+        "stability": 2,
+        "effect": "Super Oxidizer - Can attack any compound",
+        "bonus": "Triple damage when attacking metals"
+    },
+    {
+        "name": "Chlorine",
+        "category": "Halogens",
+        "energy_cost": 2,
+        "stability": 3,
+        "effect": "Disinfectant - Destroys biological compounds",
+        "bonus": "Double damage to water compounds"
+    },
+    {
+        "name": "Bromine",
+        "category": "Halogens",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Liquid Infiltrator - Can bypass defensive compounds",
+        "bonus": "+3 attack against organic compounds"
+    },
+    {
+        "name": "Iodine",
+        "category": "Halogens",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Sublimation - Can change state to bypass defenses",
+        "bonus": "+2 damage to all compounds"
+    },
+    {
+        "name": "Astatine",
+        "category": "Halogens",
+        "energy_cost": 4,
+        "stability": 1,
+        "effect": "Radioactive Decay - Damages all adjacent cards",
+        "bonus": "Instant destruction of unstable compounds"
+    },
+    {
+        "name": "Helium",
+        "category": "Noble Gases",
+        "energy_cost": 1,
+        "stability": 10,
+        "effect": "Quantum Tunnel - Can move to any position",
+        "bonus": "Immune to all chemical attacks"
+    },
+    {
+        "name": "Neon",
+        "category": "Noble Gases",
+        "energy_cost": 2,
+        "stability": 10,
+        "effect": "Bright Shield - Illuminates hidden cards",
+        "bonus": "Can negate one reaction per turn"
+    },
+    {
+        "name": "Argon",
+        "category": "Noble Gases",
+        "energy_cost": 2,
+        "stability": 10,
+        "effect": "Perfect Shield - Blocks one attack per turn",
+        "bonus": "Provides +1 stability to adjacent cards"
+    },
+    {
+        "name": "Krypton",
+        "category": "Noble Gases",
+        "energy_cost": 3,
+        "stability": 9,
+        "effect": "Noble Barrier - Prevents reactions in adjacent spaces",
+        "bonus": "Can freeze one reaction per game"
+    },
+    {
+        "name": "Xenon",
+        "category": "Noble Gases",
+        "energy_cost": 3,
+        "stability": 9,
+        "effect": "Rare Reaction - Can form compounds once per game",
+        "bonus": "When used in compounds, provides perfect stability"
+    }
+]

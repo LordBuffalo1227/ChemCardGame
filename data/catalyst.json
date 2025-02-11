@@ -1,0 +1,167 @@
+[
+    {
+        "name": "Platinum Surface",
+        "category": "Inorganic Catalysts",
+        "type": "Heterogeneous Catalyst",
+        "energy_cost": 3,
+        "stability": 6,
+        "effect": "Reduces energy cost of hydrogenation reactions by 50%",
+        "special": "Can be reused up to 3 times before deactivation",
+        "educational_note": "Used in catalytic converters and industrial processes",
+        "bonus": "Enhances catalytic efficiency"
+    },
+    {
+        "name": "Zeolite Framework",
+        "category": "Inorganic Catalysts",
+        "type": "Shape-Selective Catalyst",
+        "energy_cost": 4,
+        "stability": 7,
+        "effect": "Allows specific reactions based on molecular size",
+        "special": "Can prevent large molecules from reacting",
+        "educational_note": "Used in petrochemical industry for selective cracking",
+        "bonus": "Provides molecular sieving effect"
+    },
+    {
+        "name": "Iron Oxide",
+        "category": "Inorganic Catalysts",
+        "type": "Contact Catalyst",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Doubles the rate of decomposition reactions",
+        "special": "+1 stability to all metal compounds",
+        "educational_note": "Used in Haber process for ammonia synthesis",
+        "bonus": "Increases reaction speed"
+    },
+    {
+        "name": "Vanadium(V) Oxide",
+        "category": "Inorganic Catalysts",
+        "type": "Oxidation Catalyst",
+        "energy_cost": 4,
+        "stability": 6,
+        "effect": "Reduces cost of all oxidation reactions",
+        "special": "Can be poisoned by sulfur compounds",
+        "educational_note": "Used in sulfuric acid production",
+        "bonus": "Boosts oxidation processes"
+    },
+    {
+        "name": "Nickel Surface",
+        "category": "Inorganic Catalysts",
+        "type": "Hydrogenation Catalyst",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Allows adding H₂ to organic compounds at half cost",
+        "special": "Creates more stable products",
+        "educational_note": "Used in margarine production",
+        "bonus": "Enhances hydrogenation reactions"
+    },
+    {
+        "name": "Amylase",
+        "category": "Biochemical Catalysts",
+        "type": "Digestive Enzyme",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Breaks down complex carbohydrates instantly",
+        "special": "Only works on starch compounds",
+        "educational_note": "Present in human saliva and pancreatic juice",
+        "bonus": "Speeds up starch digestion"
+    },
+    {
+        "name": "DNA Polymerase",
+        "category": "Biochemical Catalysts",
+        "type": "Replication Enzyme",
+        "energy_cost": 5,
+        "stability": 6,
+        "effect": "Copy any compound card once per turn",
+        "special": "Requires energy cost",
+        "educational_note": "Essential for DNA replication",
+        "bonus": "Enhances genetic material duplication"
+    },
+    {
+        "name": "Pepsin",
+        "category": "Biochemical Catalysts",
+        "type": "Protein Catalyst",
+        "energy_cost": 3,
+        "stability": 5,
+        "effect": "Breaks protein compounds into smaller units",
+        "special": "Only works in acidic conditions",
+        "educational_note": "Major digestive enzyme in stomach",
+        "bonus": "Boosts protein digestion"
+    },
+    {
+        "name": "Catalase",
+        "category": "Biochemical Catalysts",
+        "type": "Antioxidant Enzyme",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Instantly decompose H₂O₂ into H₂O and O₂",
+        "special": "Prevents oxidative damage",
+        "educational_note": "Present in all oxygen-using organisms",
+        "bonus": "Protects cells from oxidative stress"
+    },
+    {
+        "name": "ATP Synthase",
+        "category": "Biochemical Catalysts",
+        "type": "Energy Catalyst",
+        "energy_cost": 4,
+        "stability": 6,
+        "effect": "Generate energy cards from proton gradients",
+        "special": "Works with electron transport chain",
+        "educational_note": "Powers cellular processes",
+        "bonus": "Enhances ATP production"
+    },
+    {
+        "name": "Palladium Complex",
+        "category": "Industrial Catalysts",
+        "type": "Cross-Coupling Catalyst",
+        "energy_cost": 5,
+        "stability": 7,
+        "effect": "Join two organic compounds at reduced cost",
+        "special": "Works only with halogen-containing compounds",
+        "educational_note": "Used in pharmaceutical synthesis",
+        "bonus": "Optimizes organic coupling reactions"
+    },
+    {
+        "name": "Ziegler-Natta Catalyst",
+        "category": "Industrial Catalysts",
+        "type": "Polymerization Catalyst",
+        "energy_cost": 6,
+        "stability": 8,
+        "effect": "Create polymer compounds at triple speed",
+        "special": "Controls polymer structure",
+        "educational_note": "Used in plastic production",
+        "bonus": "Enhances polymer formation"
+    },
+    {
+        "name": "Raney Nickel",
+        "category": "Industrial Catalysts",
+        "type": "Reduction Catalyst",
+        "energy_cost": 4,
+        "stability": 6,
+        "effect": "Remove oxygen from organic compounds",
+        "special": "Can be used twice per turn",
+        "educational_note": "Used in hydrogenation reactions",
+        "bonus": "Improves reduction efficiency"
+    },
+    {
+        "name": "Silver Catalyst",
+        "category": "Industrial Catalysts",
+        "type": "Selective Oxidation",
+        "energy_cost": 4,
+        "stability": 5,
+        "effect": "Oxidize specific functional groups",
+        "special": "Doesn't affect other parts of molecule",
+        "educational_note": "Used in formaldehyde production",
+        "bonus": "Increases selective oxidation control"
+    },
+    {
+        "name": "Acid Catalyst",
+        "category": "Industrial Catalysts",
+        "type": "Proton Donor",
+        "energy_cost": 2,
+        "stability": 4,
+        "effect": "Activate organic reactions",
+        "special": "Can be regenerated each turn",
+        "educational_note": "Common in organic synthesis",
+        "bonus": "Enhances acid-catalyzed reactions"
+    }
+]

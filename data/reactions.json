@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Combustion Reaction",
+        "category": "Basic Reaction",
+        "energy_cost": 3,
+        "stability": 4,
+        "requirements": ["Hydrocarbon", "O₂", "O₂"],
+        "effect": "Deals 40 damage to target compound",
+        "bonus": "Produces CO₂ and H₂O as byproducts"
+    },
+    {
+        "name": "Double Displacement",
+        "category": "Basic Reaction",
+        "energy_cost": 2,
+        "stability": 5,
+        "requirements": ["Any Compound", "Any Compound"],
+        "effect": "Swap the positive ions between compounds to create new compounds",
+        "bonus": "AB + CD → AD + CB"
+    },
+    {
+        "name": "Neutralization",
+        "category": "Basic Reaction",
+        "energy_cost": 2,
+        "stability": 6,
+        "requirements": ["Acid Compound", "Base Compound"],
+        "effect": "Both compounds are removed from play, draw 2 cards",
+        "bonus": "Creates water and a salt as products"
+    },
+    {
+        "name": "Oxidation-Reduction",
+        "category": "Basic Reaction",
+        "energy_cost": 3,
+        "stability": 7,
+        "requirements": ["Metal Element", "O₂"],
+        "effect": "Creates a metal oxide compound with +2 stability",
+        "bonus": "Electron transfer process"
+    },
+    {
+        "name": "Photosynthesis",
+        "category": "Intermediate Reaction",
+        "energy_cost": 5,
+        "stability": 8,
+        "requirements": ["CO₂", "H₂O", "Light Energy"],
+        "effect": "Create glucose compound and release O₂",
+        "bonus": "Plants' primary energy production method"
+    },
+    {
+        "name": "Electrolysis",
+        "category": "Intermediate Reaction",
+        "energy_cost": 4,
+        "stability": 5,
+        "requirements": ["H₂O", "Energy Card"],
+        "effect": "Split water into H₂ and O₂ elements",
+        "bonus": "Uses electricity to break chemical bonds"
+    },
+    {
+        "name": "Polymerization",
+        "category": "Intermediate Reaction",
+        "energy_cost": 6,
+        "stability": 9,
+        "requirements": ["3x Same Monomer Compound"],
+        "effect": "Create a polymer with triple stability",
+        "bonus": "Forms long chains of repeated units"
+    },
+    {
+        "name": "Nuclear Fission",
+        "category": "Advanced Reaction",
+        "energy_cost": 8,
+        "stability": 3,
+        "requirements": ["Uranium Element"],
+        "effect": "Split into smaller elements, deal 100 damage",
+        "bonus": "Releases massive energy by splitting atoms"
+    },
+    {
+        "name": "Catalytic Cracking",
+        "category": "Advanced Reaction",
+        "energy_cost": 5,
+        "stability": 6,
+        "requirements": ["Long-chain Hydrocarbon", "Catalyst Card"],
+        "effect": "Break into two smaller hydrocarbons",
+        "bonus": "Important in petroleum refining"
+    },
+    {
+        "name": "Acid Rain Formation",
+        "category": "Environmental Reaction",
+        "energy_cost": 4,
+        "stability": 5,
+        "requirements": ["SO₂/NO₂", "H₂O", "O₂"],
+        "effect": "Create acid that damages all compounds each turn",
+        "bonus": "Environmental impact of pollution"
+    },
+    {
+        "name": "Ozone Depletion",
+        "category": "Environmental Reaction",
+        "energy_cost": 5,
+        "stability": 4,
+        "requirements": ["CFC Compound", "O₃"],
+        "effect": "Destroy ozone and create damage-dealing radicals",
+        "bonus": "Impact of chlorofluorocarbons"
+    },
+    {
+        "name": "Greenhouse Effect",
+        "category": "Environmental Reaction",
+        "energy_cost": 6,
+        "stability": 7,
+        "requirements": ["3x CO₂"],
+        "effect": "Increase all reaction damage by 50%",
+        "bonus": "Atmospheric heat retention"
+    },
+    {
+        "name": "Corrosion",
+        "category": "Specialized Reaction",
+        "energy_cost": 3,
+        "stability": 6,
+        "requirements": ["Metal Compound", "O₂", "H₂O"],
+        "effect": "Gradually reduce target compound's stability",
+        "bonus": "Metal oxidation process"
+    },
+    {
+        "name": "Enzyme Catalysis",
+        "category": "Specialized Reaction",
+        "energy_cost": 4,
+        "stability": 7,
+        "requirements": ["Enzyme Catalyst", "Substrate Compound"],
+        "effect": "Perform reaction at half energy cost",
+        "bonus": "Biological reaction acceleration"
+    },
+    {
+        "name": "Buffer Formation",
+        "category": "Specialized Reaction",
+        "energy_cost": 4,
+        "stability": 8,
+        "requirements": ["Weak Acid", "Salt Compound"],
+        "effect": "Protect compounds from pH changes",
+        "bonus": "Maintains stable pH levels"
+    },
+    {
+        "name": "Radical Chain Reaction",
+        "category": "Specialized Reaction",
+        "energy_cost": 5,
+        "stability": 4,
+        "requirements": ["Free Radical Initiator"],
+        "effect": "Create chain of reactions affecting multiple compounds",
+        "bonus": "Self-propagating reaction sequence"
+    },
+    {
+        "name": "Coordination Complex",
+        "category": "Specialized Reaction",
+        "energy_cost": 6,
+        "stability": 9,
+        "requirements": ["Transition Metal", "2x Ligand Compound"],
+        "effect": "Create highly stable complex with special abilities",
+        "bonus": "Metal-ligand bonding"
+    },
+    {
+        "name": "Supersaturation",
+        "category": "Expert Reaction",
+        "energy_cost": 5,
+        "stability": 8,
+        "requirements": ["Solute Compound", "Temperature Decrease Card"],
+        "effect": "Create crystalline form with doubled defense",
+        "bonus": "Solution containing more than equilibrium amount"
+    },
+    {
+        "name": "Diels-Alder Cycloaddition",
+        "category": "Expert Reaction",
+        "energy_cost": 7,
+        "stability": 8,
+        "requirements": ["Diene Compound", "Dienophile Compound"],
+        "effect": "Create complex ring structure with unique effects",
+        "bonus": "Forms carbon-carbon bonds in rings"
+    },
+    {
+        "name": "Bioluminescence",
+        "category": "Expert Reaction",
+        "energy_cost": 4,
+        "stability": 5,
+        "requirements": ["Luciferin Compound", "O₂"],
+        "effect": "Illuminate opponent's hand for one turn",
+        "bonus": "Natural light-producing chemical reaction"
+    }
+]
