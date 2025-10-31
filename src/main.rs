@@ -1,8 +1,8 @@
-use rand::seq::SliceRandom;
 use rand::rng;
+use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
-use std::fs;
 use std::collections::HashMap;
+use std::fs;
 use std::io::{self, Write}; // <-- Importing Write trait
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -40,13 +40,21 @@ impl Player {
 
         println!("\n=== Select a Compound to Attack With ===");
         for (index, card) in self.field.iter().enumerate() {
-            println!("[{}] {} (Attack Power: {}, Stability: {})", index + 1, card.name, card.attack_power, card.stability);
+            println!(
+                "[{}] {} (Attack Power: {}, Stability: {})",
+                index + 1,
+                card.name,
+                card.attack_power,
+                card.stability
+            );
         }
 
         print!("Enter the number of the attacking compound: ");
         io::stdout().flush().unwrap();
         let mut attack_choice = String::new();
-        io::stdin().read_line(&mut attack_choice).expect("Failed to read line");
+        io::stdin()
+            .read_line(&mut attack_choice)
+            .expect("Failed to read line");
 
         if let Ok(choice) = attack_choice.trim().parse::<usize>() {
             if choice > 0 && choice <= self.field.len() {
@@ -55,13 +63,20 @@ impl Player {
 
                 println!("\n=== Select an Opponent's Compound to Attack ===");
                 for (index, card) in opponent.field.iter().enumerate() {
-                    println!("[{}] {} (Stability: {})", index + 1, card.name, card.stability);
+                    println!(
+                        "[{}] {} (Stability: {})",
+                        index + 1,
+                        card.name,
+                        card.stability
+                    );
                 }
 
                 print!("Enter the number of the target compound: ");
                 io::stdout().flush().unwrap();
                 let mut target_choice = String::new();
-                io::stdin().read_line(&mut target_choice).expect("Failed to read line");
+                io::stdin()
+                    .read_line(&mut target_choice)
+                    .expect("Failed to read line");
 
                 if let Ok(target) = target_choice.trim().parse::<usize>() {
                     if target > 0 && target <= opponent.field.len() {
@@ -79,14 +94,20 @@ impl Player {
                         if attack_power < target_stability {
                             let difference = target_stability - attack_power;
                             attacker.stability = attacker.stability.saturating_sub(difference);
-                            println!("{} loses {} stability and now has {} stability.", attacker.name, difference, attacker.stability);
+                            println!(
+                                "{} loses {} stability and now has {} stability.",
+                                attacker.name, difference, attacker.stability
+                            );
                         }
 
                         if target_card.stability == 0 {
                             println!("{} has been destroyed!", target_card.name);
                             opponent.field.remove(target_index);
                         } else {
-                            println!("{}'s stability is now {}.", target_card.name, target_card.stability);
+                            println!(
+                                "{}'s stability is now {}.",
+                                target_card.name, target_card.stability
+                            );
                         }
 
                         if attacker.stability == 0 {
@@ -126,7 +147,11 @@ impl Player {
     }
 
     fn play_card(&mut self, card_name: &str) -> String {
-        if let Some(index) = self.hand.iter().position(|c| c.name.to_lowercase() == card_name.to_lowercase()) {
+        if let Some(index) = self
+            .hand
+            .iter()
+            .position(|c| c.name.to_lowercase() == card_name.to_lowercase())
+        {
             let card = self.hand.remove(index);
             return if self.energy >= card.energy_cost {
                 self.energy -= card.energy_cost;
@@ -135,7 +160,7 @@ impl Player {
             } else {
                 self.hand.push(card);
                 format!("Not enough energy to play {}!", card_name)
-            }
+            };
         }
         format!("Card {} not found in hand!", card_name)
     }
@@ -166,41 +191,46 @@ impl Player {
         println!("{}", "=".repeat(line_width));
 
         println!("\n=== GAME STATUS ===");
-        println!(
-            "+{:-<width$}+{:-<width$}+",
-            "", "", width = col_width
-        );
+        println!("+{:-<width$}+{:-<width$}+", "", "", width = col_width);
         println!(
             "| {:<width$} | {:<width$} |",
-            self.name, opponent.name, width = col_width
+            self.name,
+            opponent.name,
+            width = col_width
         );
-        println!(
-            "|{:-<width$}|{:-<width$}|",
-            "", "", width = col_width
-        );
+        println!("|{:-<width$}|{:-<width$}|", "", "", width = col_width);
         println!(
             "| Energy: {:<width$} | Energy: {:<width$} |",
-            self.energy, opponent.energy, width = col_width - 9
+            self.energy,
+            opponent.energy,
+            width = col_width - 9
         );
         println!(
             "| Compounds in Field: {:<width$} | Compounds in Field: {:<width$} |",
-            self.field.len(), opponent.field.len(), width = col_width - 20
+            self.field.len(),
+            opponent.field.len(),
+            width = col_width - 20
         );
         println!(
             "| Total Stability: {:<width$} | Total Stability: {:<width$} |",
-            self.total_stability(), opponent.total_stability(), width = col_width - 17
+            self.total_stability(),
+            opponent.total_stability(),
+            width = col_width - 17
         );
         println!(
             "| Deck Remaining: {:<width$} | Deck Remaining: {:<width$} |",
-            self.deck.len(), opponent.deck.len(), width = col_width - 15
+            self.deck.len(),
+            opponent.deck.len(),
+            width = col_width - 15
         );
-        println!(
-            "+{:-<width$}+{:-<width$}+\n",
-            "", "", width = col_width
-        );
+        println!("+{:-<width$}+{:-<width$}+\n", "", "", width = col_width);
     }
     fn display_card_stats(&self, card_name: &str) {
-        if let Some(card) = self.hand.iter().find(|c| c.name.to_lowercase() == card_name.to_lowercase()) {
+        if let Some(card) = self
+            .hand
+            .iter()
+            .find(|c| c.name.to_lowercase() == card_name.to_lowercase())
+        {
             println!("\n+-------------------------------------------------+");
             println!("|               ⚛  {:^30}  ⚛               |", card.name);
             println!("+-------------------------------------------------+");
@@ -219,28 +249,47 @@ impl Player {
         let mut categorized_cards: HashMap<String, Vec<&Card>> = HashMap::new();
 
         let category_map = vec![
-            ("Alkali Metals", "Elemental"), ("Alkaline Earth Metals", "Elemental"),
-            ("Transition Metals", "Elemental"), ("Post-Transition Metals", "Elemental"),
-            ("Metalloids", "Elemental"), ("Nonmetals", "Elemental"),
-            ("Halogens", "Elemental"), ("Noble Gases", "Elemental"),
-            ("Ionic Compound", "Compound"), ("Strong Acid", "Compound"),
-            ("Organic Compound", "Compound"), ("Mineral Compound", "Compound"),
-            ("Basic Compound", "Compound"), ("Metal Oxide", "Compound"),
-            ("Elemental Crystal", "Compound"), ("Metal Salt", "Compound"),
-            ("Peroxide", "Compound"), ("Salt", "Compound"),
-            ("Network Solid", "Compound"), ("Acid", "Compound"),
-            ("Biological Complex", "Compound"), ("Synthetic Polymer", "Compound"),
-            ("Carbon Allotrope", "Compound"), ("Coordination Complex", "Compound"),
+            ("Alkali Metals", "Elemental"),
+            ("Alkaline Earth Metals", "Elemental"),
+            ("Transition Metals", "Elemental"),
+            ("Post-Transition Metals", "Elemental"),
+            ("Metalloids", "Elemental"),
+            ("Nonmetals", "Elemental"),
+            ("Halogens", "Elemental"),
+            ("Noble Gases", "Elemental"),
+            ("Ionic Compound", "Compound"),
+            ("Strong Acid", "Compound"),
+            ("Organic Compound", "Compound"),
+            ("Mineral Compound", "Compound"),
+            ("Basic Compound", "Compound"),
+            ("Metal Oxide", "Compound"),
+            ("Elemental Crystal", "Compound"),
+            ("Metal Salt", "Compound"),
+            ("Peroxide", "Compound"),
+            ("Salt", "Compound"),
+            ("Network Solid", "Compound"),
+            ("Acid", "Compound"),
+            ("Biological Complex", "Compound"),
+            ("Synthetic Polymer", "Compound"),
+            ("Carbon Allotrope", "Compound"),
+            ("Coordination Complex", "Compound"),
             ("Ceramic Compound", "Compound"),
-            ("Basic Reaction", "Reaction"), ("Intermediate Reaction", "Reaction"),
-            ("Advanced Reaction", "Reaction"), ("Environmental Reaction", "Reaction"),
-            ("Specialized Reaction", "Reaction"), ("Expert Reaction", "Reaction"),
-            ("Inorganic Catalysts", "Catalyst"), ("Biochemical Catalysts", "Catalyst"),
-            ("Industrial Catalysts", "Catalyst"), ("Environmental Catalysts", "Catalyst"),
+            ("Basic Reaction", "Reaction"),
+            ("Intermediate Reaction", "Reaction"),
+            ("Advanced Reaction", "Reaction"),
+            ("Environmental Reaction", "Reaction"),
+            ("Specialized Reaction", "Reaction"),
+            ("Expert Reaction", "Reaction"),
+            ("Inorganic Catalysts", "Catalyst"),
+            ("Biochemical Catalysts", "Catalyst"),
+            ("Industrial Catalysts", "Catalyst"),
+            ("Environmental Catalysts", "Catalyst"),
             ("Specialty Catalysts", "Catalyst"),
             ("Scientist Card", "Scientist"),
-            ("State Card", "State")
-        ].into_iter().collect::<HashMap<_, _>>();
+            ("State Card", "State"),
+        ]
+        .into_iter()
+        .collect::<HashMap<_, _>>();
 
         // En lugar de almacenar solo el nombre, guardamos referencias a las cartas
         for card in &self.hand {
@@ -254,7 +303,14 @@ impl Player {
                 .push(card);
         }
 
-        let categories = ["Elemental", "Compound", "Reaction", "Catalyst", "Scientist", "State"];
+        let categories = [
+            "Elemental",
+            "Compound",
+            "Reaction",
+            "Catalyst",
+            "Scientist",
+            "State",
+        ];
         let max_width = 120;
         let col_width = max_width / categories.len();
 
@@ -266,7 +322,11 @@ impl Player {
         }
         println!("\n+{}+", "-".repeat(max_width));
 
-        let max_rows = categorized_cards.values().map(|v| v.len()).max().unwrap_or(0);
+        let max_rows = categorized_cards
+            .values()
+            .map(|v| v.len())
+            .max()
+            .unwrap_or(0);
 
         for i in 0..max_rows {
             print!("|");
@@ -299,31 +359,36 @@ impl Player {
         // etc.
 
         // Muestra cuántas cartas de 'Compound' quedan en el campo o mano del oponente
-        let opponent_compounds = opponent.field.iter()
+        let opponent_compounds = opponent
+            .field
+            .iter()
             .filter(|c| c.category.to_lowercase().contains("compound"))
             .count();
 
         // Imprime un resumen
         println!("\n[INFORMACIÓN DE VICTORIA]");
-        println!("Cartas 'Compound' del oponente en juego: {}", opponent_compounds);
+        println!(
+            "Cartas 'Compound' del oponente en juego: {}",
+            opponent_compounds
+        );
         println!(
             "Cartas restantes en el mazo del oponente: {}",
             opponent.deck.len()
         );
-        println!(
-            "Energía actual tuya ({}): {}",
-            self.name, self.energy
-        );
-        println!(
-            "Energía actual de {}: {}",
-            opponent.name, opponent.energy
-        );
+        println!("Energía actual tuya ({}): {}", self.name, self.energy);
+        println!("Energía actual de {}: {}", opponent.name, opponent.energy);
 
         // Aquí puedes añadir más detalles si quieres
         // (puntos de vida, estabilidad total, etc.)
         // Por ejemplo, mostrar la estabilidad total de ambos jugadores:
-        println!("Estabilidad total de tus compuestos: {}", self.total_stability());
-        println!("Estabilidad total de los compuestos del oponente: {}", opponent.total_stability());
+        println!(
+            "Estabilidad total de tus compuestos: {}",
+            self.total_stability()
+        );
+        println!(
+            "Estabilidad total de los compuestos del oponente: {}",
+            opponent.total_stability()
+        );
 
         // Si tuvieras un campo de 'vida' o 'puntos de salud' en Player, podrías mostrarlo así:
         // println!("Tu vida ({}): {}", self.name, self.life_points);
@@ -332,19 +397,21 @@ impl Player {
 }
 fn load_deck() -> Vec<Card> {
     let json_files = vec![
-        "data/elements.json", "data/compounds.json", "data/catalyst.json",
-        "data/reactions.json", "data/scientist.json", "data/states.json"
+        "data/elements.json",
+        "data/compounds.json",
+        "data/catalyst.json",
+        "data/reactions.json",
+        "data/scientist.json",
+        "data/states.json",
     ];
 
     let mut all_cards = Vec::new();
     for file in json_files {
         match fs::read_to_string(file) {
-            Ok(data) => {
-                match serde_json::from_str::<Vec<Card>>(&data) {
-                    Ok(mut cards) => all_cards.append(&mut cards),
-                    Err(e) => println!("Error parsing JSON file '{}': {}", file, e),
-                }
-            }
+            Ok(data) => match serde_json::from_str::<Vec<Card>>(&data) {
+                Ok(mut cards) => all_cards.append(&mut cards),
+                Err(e) => println!("Error parsing JSON file '{}': {}", file, e),
+            },
             Err(e) => println!("Warning: Could not read file '{}': {}", file, e),
         }
     }
@@ -366,9 +433,7 @@ fn clear_screen() {
             .status()
             .unwrap();
     } else {
-        std::process::Command::new("clear")
-            .status()
-            .unwrap();
+        std::process::Command::new("clear").status().unwrap();
     }
 }
 fn game_loop() {
@@ -388,14 +453,21 @@ fn game_loop() {
         player1.display_hand_table();
         player1.display_victory_status(&player2);
 
-        loop { // Loop to prevent turn consumption when viewing stats
-            println!("(A) Play a Card  |  (P) Pass  |  (T) Attack  |  (S) Show Card Stats |  (Q) Quit");
-            println!("--------------------------------------------------------------------------------");
+        loop {
+            // Loop to prevent turn consumption when viewing stats
+            println!(
+                "(A) Play a Card  |  (P) Pass  |  (T) Attack  |  (S) Show Card Stats |  (Q) Quit"
+            );
+            println!(
+                "--------------------------------------------------------------------------------"
+            );
             print!("Enter your choice: ");
             io::stdout().flush().unwrap();
 
             let mut input = String::new();
-            io::stdin().read_line(&mut input).expect("Failed to read line");
+            io::stdin()
+                .read_line(&mut input)
+                .expect("Failed to read line");
             let action = input.trim().to_uppercase();
 
             match action.as_str() {
@@ -407,13 +479,21 @@ fn game_loop() {
 
                     println!("\n=== Select a Card to Play ===");
                     for (index, card) in player1.hand.iter().enumerate() {
-                        println!("[{}] {} (Energy: {}, Stability: {})", index + 1, card.name, card.energy_cost, card.stability);
+                        println!(
+                            "[{}] {} (Energy: {}, Stability: {})",
+                            index + 1,
+                            card.name,
+                            card.energy_cost,
+                            card.stability
+                        );
                     }
                     print!("Enter the number of the card to play: ");
                     io::stdout().flush().unwrap();
 
                     let mut card_choice = String::new();
-                    io::stdin().read_line(&mut card_choice).expect("Failed to read line");
+                    io::stdin()
+                        .read_line(&mut card_choice)
+                        .expect("Failed to read line");
 
                     if let Ok(choice) = card_choice.trim().parse::<usize>() {
                         if choice > 0 && choice <= player1.hand.len() {
@@ -435,13 +515,21 @@ fn game_loop() {
 
                     println!("\n=== Select a Card to Inspect ===");
                     for (index, card) in player1.hand.iter().enumerate() {
-                        println!("[{}] {} (Energy: {}, Stability: {})", index + 1, card.name, card.energy_cost, card.stability);
+                        println!(
+                            "[{}] {} (Energy: {}, Stability: {})",
+                            index + 1,
+                            card.name,
+                            card.energy_cost,
+                            card.stability
+                        );
                     }
                     print!("Enter the number of the card to inspect (or 0 to return): ");
                     io::stdout().flush().unwrap();
 
                     let mut inspect_choice = String::new();
-                    io::stdin().read_line(&mut inspect_choice).expect("Failed to read line");
+                    io::stdin()
+                        .read_line(&mut inspect_choice)
+                        .expect("Failed to read line");
 
                     if let Ok(choice) = inspect_choice.trim().parse::<usize>() {
                         if choice == 0 {
@@ -480,15 +568,24 @@ fn game_loop() {
         // -------------------------
         player2.draw_card();
         println!("\nCPU Turn:");
-        if let Some(index) = player2.hand.iter().position(|c| c.energy_cost <= player2.energy) {
+        if let Some(index) = player2
+            .hand
+            .iter()
+            .position(|c| c.energy_cost <= player2.energy)
+        {
             let card_name = player2.hand[index].name.clone();
             println!("CPU plays {}.", card_name);
             player2.play_card(&card_name);
 
             // Display the last played card by the CPU
             if let Some(last_played) = player2.field.last() {
-                println!("CPU placed '{}' on the field. (Energy Cost: {}, Stability: {}, Attack: {})",
-                         last_played.name, last_played.energy_cost, last_played.stability, last_played.attack_power);
+                println!(
+                    "CPU placed '{}' on the field. (Energy Cost: {}, Stability: {}, Attack: {})",
+                    last_played.name,
+                    last_played.energy_cost,
+                    last_played.stability,
+                    last_played.attack_power
+                );
             }
         } else {
             println!("CPU passes.");
